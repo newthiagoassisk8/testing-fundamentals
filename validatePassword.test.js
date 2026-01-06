@@ -23,8 +23,8 @@ let passwordsToTest = [
     ['Ab1', false],
     ['Abc 1234', false],
     ['', false],
-    [null, false]
-]
+    [null, false],
+];
 function hasUpperCase(pwd) {
     return /[A-Z]/.test(pwd);
 }
@@ -33,8 +33,7 @@ function hasNumber(pwd) {
     return /\d/.test(pwd);
 }
 function hasSpace(pwd) {
-    return pwd !== pwd.trim()
-
+    return /\s/.test(pwd);
 }
 
 function testingPasswords(testPasswords) {
@@ -49,12 +48,12 @@ function testingPasswords(testPasswords) {
         }
     }
 }
-function isTooShort(pwd, limit) {
-    return pwd.length >= limit
+function isBiggerThanLimit(pwd, limit) {
+    return pwd.length > limit;
 }
 
 function isvalidPassword(pwd) {
-    return pwd !== null && !hasSpace(pwd) && hasUpperCase(pwd) && hasNumber(pwd) && isTooShort(pwd, 3);
+    return pwd !== null && !hasSpace(pwd) && hasUpperCase(pwd) && hasNumber(pwd) && isBiggerThanLimit(pwd, 3);
 }
 
-testingPasswords(passwordsToTest)
+testingPasswords(passwordsToTest);
