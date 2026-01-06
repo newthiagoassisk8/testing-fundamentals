@@ -7,7 +7,7 @@ let namesToTest = [
     [' tiago', false],
     [undefined, false],
     ['fernanda', false],
-    [' ', false]
+    [' ', false],
 ];
 
 function isValidName(name) {
