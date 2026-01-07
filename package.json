@@ -1,0 +1,26 @@
+{
+    "name": "testingfundamentals",
+    "version": "1.0.0",
+    "description": "",
+    "homepage": "https://github.com/newthiagoassisk8/testing-fundamentals#readme",
+    "bugs": {
+        "url": "https://github.com/newthiagoassisk8/testing-fundamentals/issues"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/newthiagoassisk8/testing-fundamentals.git"
+    },
+    "license": "ISC",
+    "author": "",
+    "type": "module",
+    "main": "validateEmail.test.js",
+    "scripts": {
+        "test": "node --experimental-vm-modules ./node_modules/jest/bin/jest.js"
+    },
+    "devDependencies": {
+        "jest": "^29.7.0"
+    },
+    "dependencies": {
+        "ts-jest": "^29.4.6"
+    }
+}

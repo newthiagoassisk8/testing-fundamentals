@@ -41,7 +41,7 @@ function testingPasswords(testPasswords) {
         let [value, expected] = testPasswords[i];
         let result = isvalidPassword(value);
         const isAssert = result === expected;
-        console.log({ value, expected, result, isAssert });
+        // console.log({ value, expected, result, isAssert });
 
         if (!isAssert && failFirst) {
             throw new Error(`Expected ${expected} but received ${result}`);
@@ -52,7 +52,7 @@ function isBiggerThanLimit(pwd, limit) {
     return pwd.length > limit;
 }
 
-function isvalidPassword(pwd) {
+export function isvalidPassword(pwd) {
     return pwd !== null && !hasSpace(pwd) && hasUpperCase(pwd) && hasNumber(pwd) && isBiggerThanLimit(pwd, 3);
 }
 
