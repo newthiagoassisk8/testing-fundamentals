@@ -10,7 +10,7 @@ let passwordsToTest = [
     { value: '', expected: false },
     { value: null, expected: false },
 ];
-test('soma 2 + 2 é igual 4', function () {
+test('soma 2 + 2 é igual 4', function() {
     expect(sum(2, 2)).toBe(4);
 });
 
